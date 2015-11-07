@@ -2,6 +2,11 @@ class TicketsController < ApplicationController
 	before_action :set_project
 	before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
+	def index
+		@ticket = @project.tickets.build
+		render "new"
+	end 
+
 	def new
 		# The tickets method on Project objects is defined by calling an association method in the 
 		# Project class called has_many, which can be found in app/models/project.rb.
