@@ -1,8 +1,0 @@
-<!--This version of simple_form_for, with an array argument, indicates that you want the form to 
-	post to a nested route.-->
-<%= simple_form_for([project, ticket]) do |f| %>
-	<%= f.input :name %>
-	<%= f.input :description %>
-
-	<%= f.button :submit, class: "btn-primary" %>
-<% end %>
